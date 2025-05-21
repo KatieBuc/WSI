@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 def project_root() -> Path:
-    # climb out of src/wsi to the repo root
+    # climb out of /wsi to the repo root
     return Path(__file__).resolve().parent.parent
 
 
