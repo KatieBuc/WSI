@@ -67,7 +67,6 @@ def process_population_data(
 def process_employment_data(
     df: pd.DataFrame, iso_codes: list[str] | None = None
 ) -> pd.DataFrame:
-    # map ISO codes
     df["ISO_code"] = df["ref_area.label"].apply(lambda name: get_iso(name))
 
     if iso_codes is not None:
