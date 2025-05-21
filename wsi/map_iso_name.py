@@ -52,14 +52,3 @@ ALL_ISO_NAME = {
     "ASM": "American Samoa",
     "PYF": "French Polynesia",
 }
-
-EXCLUDE_ISO = {
-    "TKL",
-    "WLF",
-    "MNP",
-    "ASM",
-    "PYF",
-}
-
-# Active ISO_NAME map by filtering out the excludes
-ISO_NAME = {iso: name for iso, name in ALL_ISO_NAME.items() if iso not in EXCLUDE_ISO}

@@ -1,0 +1,57 @@
+# wsi/config.py
+
+INDICATORS = {
+    "Education": {"dimension": "Equity", "invert": False, "fill": "income_avg"},
+    "Employment": {"dimension": "Equity", "invert": False, "fill": "income_avg"},
+    "Parliamentary Representation": {
+        "dimension": "Equity",
+        "invert": False,
+        "fill": "region_avg",
+    },
+    "Poverty": {"dimension": "Equity", "invert": True, "fill": "income_avg"},
+    "Legal Protection Index": {
+        "dimension": "Equity",
+        "invert": False,
+        "fill": "region_avg",
+    },
+    "Son Bias": {"dimension": "Protection", "invert": True, "fill": "region_avg"},
+    "Maternal Mortality": {
+        "dimension": "Protection",
+        "invert": True,
+        "fill": "region_avg",
+    },
+    "Attitudes Towards Violence": {
+        "dimension": "Protection",
+        "invert": True,
+        "fill": "region_avg",
+    },
+    "Child Marriage": {"dimension": "Protection", "invert": True, "fill": "region_avg"},
+    "Access Water Sanitation": {
+        "dimension": "Resilience",
+        "invert": False,
+        "fill": "region_avg",
+    },
+    "Access Electricity": {
+        "dimension": "Resilience",
+        "invert": False,
+        "fill": "region_avg",
+    },
+    "Cell Phone Use": {
+        "dimension": "Resilience",
+        "invert": False,
+        "fill": "region_avg",
+    },
+    "Financial Inclusion": {
+        "dimension": "Resilience",
+        "invert": False,
+        "fill": "income_avg",
+    },
+}
+
+EXCLUDE_ISO = {
+    "TKL",
+    "WLF",
+    "MNP",
+    "ASM",
+    "PYF",
+}
