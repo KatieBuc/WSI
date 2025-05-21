@@ -1,8 +1,8 @@
 # wsi/indicators/poverty.py
 
 import pandas as pd
-from wsi.utils import raw_data_path
-from wsi.map_country_iso import get_iso
+from wsi.utils import raw_data_path, ignore_get_iso
+
 
 CONFIG = {
     "poverty": {
@@ -32,13 +32,6 @@ def process_poverty_raw(
         & (df["Sex"] == "BOTHSEX")
         & (df["Age"] == "ALLAGE")
     ].copy()
-
-    # ignore continents, world bank puts regions into this column too
-    def ignore_get_iso(name: str):
-        try:
-            return get_iso(name)
-        except KeyError:
-            return pd.NA
 
     df["ISO_code"] = df["GeoAreaName"].apply(ignore_get_iso)
     df = df.dropna(subset=["ISO_code"])
