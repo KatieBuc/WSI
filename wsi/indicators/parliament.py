@@ -6,7 +6,8 @@ import pandas as pd
 from wsi.utils import raw_data_path
 from wsi.map_country_iso import get_iso
 
-def build_parliamentary_representation(iso_codes: list[str] | None = None) -> pd.DataFrame:
+
+def build_parliamentary_df(iso_codes: list[str] | None = None) -> pd.DataFrame:
     """
     Load, clean, and compute % women in parliament (upper + lower) by ISO and Year.
     """
@@ -16,26 +17,37 @@ def build_parliamentary_representation(iso_codes: list[str] | None = None) -> pd
 
     # Standard column names for every sheet
     columns = [
-        "Rank", "Country", 
-        "Lower Elections", "Lower Seats", "Lower Women", "Lower pWomen",
-        "Upper Elections", "Upper Seats", "Upper Women", "Upper pWomen"
+        "Rank",
+        "Country",
+        "Lower Elections",
+        "Lower Seats",
+        "Lower Women",
+        "Lower pWomen",
+        "Upper Elections",
+        "Upper Seats",
+        "Upper Women",
+        "Upper pWomen",
     ]
 
     # Process each sheet: drop header row, tag year, unify
     frames = []
     for year_label, df in all_sheets.items():
         df.columns = columns
-        df = df.iloc[1:].copy()           # drop the duplicated header row
-        df["Year"] = int(year_label)      # safe to cast, sheet names are years
+        df = df.iloc[1:].copy()  # drop the duplicated header row
+        df["Year"] = int(year_label)  # safe to cast, sheet names are years
         frames.append(df)
 
     df = pd.concat(frames, ignore_index=True)
 
     # Coerce missing markers to zero
-    df = df.replace({ "---": 0, "-": 0, "?": 0 }).astype({
-        "Lower Seats": float, "Lower Women": float,
-        "Upper Seats": float, "Upper Women": float
-    })
+    df = df.replace({"---": 0, "-": 0, "?": 0}).astype(
+        {
+            "Lower Seats": float,
+            "Lower Women": float,
+            "Upper Seats": float,
+            "Upper Women": float,
+        }
+    )
 
     # Compute combined % women in parliament
     def pct_women(row):
@@ -61,8 +73,7 @@ def build_parliamentary_representation(iso_codes: list[str] | None = None) -> pd
         df = df[df["ISO_code"].isin(iso_codes)]
 
     df = (
-        df
-        .dropna(subset=["Parliamentary Representation", "ISO_code"])
+        df.dropna(subset=["Parliamentary Representation", "ISO_code"])
         .loc[:, ["ISO_code", "Year", "Parliamentary Representation"]]
         .reset_index(drop=True)
     )
