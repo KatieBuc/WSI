@@ -14,9 +14,14 @@ def raw_data_path(*segments) -> Path:
     return project_root() / "data" / "raw" / Path(*segments)
 
 
-# ignore continents, world bank puts regions into this column too
 def ignore_get_iso(name: str):
+    """ignore continents, world bank puts regions into this column too"""
     try:
         return get_iso(name)
     except KeyError:
         return pd.NA
+
+
+def clean_year_columns(df: pd.DataFrame) -> None:
+    """Strip year info (e.g., 'YR2020') from column names."""
+    df.columns = [col.split()[0] if "YR" in col else col for col in df.columns]
