@@ -2,7 +2,7 @@
 from pathlib import Path
 import pandas as pd
 
-from wsi.map_country_iso import get_iso
+from wsi.mapping.country_iso import get_iso
 
 
 def project_root() -> Path:
@@ -12,6 +12,10 @@ def project_root() -> Path:
 
 def raw_data_path(*segments) -> Path:
     return project_root() / "data" / "raw" / "indicators" / Path(*segments)
+
+
+def imgs_path(*segments) -> Path:
+    return project_root() / "imgs" / Path(*segments)
 
 
 def processed_data_path(*segments) -> Path:

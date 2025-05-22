@@ -2,7 +2,7 @@
 
 import pandas as pd
 from wsi.utils import raw_data_path
-from wsi.map_country_iso import get_iso
+from wsi.mapping.country_iso import get_iso
 
 
 CONFIG = {
