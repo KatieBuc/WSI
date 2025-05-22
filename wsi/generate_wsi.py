@@ -55,6 +55,22 @@ def apply_indicator_scoring(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main():
+    """
+    For each indicator:
+    1. Create a full DataFrame of all ISO codes and years.
+    2. Merge the indicator data into this full structure and sort by ISO and Year.
+    3. Fill missing values per country using:
+       - Linear interpolation
+       - Forward and backward fill
+       - Track all filled values with a corresponding source column.
+    4. Compute region and income group averages from the filled data.
+    5. For countries with entirely missing data for an indicator:
+       - Fill using the appropriate average (region or income), based on config.
+       - Mark these with the appropriate source tag (e.g., 'AVG_REG' or 'AVG_INC').
+
+    Finally, normalise and combine indicators to get dimension scores.
+    Combine dimensions to obtain baseline WSI.
+    """
     pd.set_option("future.no_silent_downcasting", True)
     years = list(range(1995, 2025))
     indicator_columns = [k for k in INDICATORS]
@@ -108,6 +124,9 @@ def main():
     summary.to_csv(processed_data_path("missing_indicators_summary.csv"), index=False)
 
     df = df_raw[~df_raw["ISO_code"].isin(EXCLUDE_ISO)].copy()
+
+    # TODO: think about how to handle excluded
+    # df_excluded = df_raw[df_raw["ISO_code"].isin(EXCLUDE_ISO)].copy()
 
     for ind in indicator_columns:
         df[f"{ind} (source)"] = ""
