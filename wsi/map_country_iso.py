@@ -237,7 +237,7 @@ COUNTRY_ISO = {
     "The f.Y.R. of Macedonia": "MKD",  # Same as "The F.Y.R. of Macedonia"
     "Fiji Islands": "FJI",
     "Dem. Rep. of East Timor": "TLS",  # East Timor is now Timor-Leste
-    "Serbia and Montenegro": "SMR",  # Was a country that split into Serbia and Montenegro
+    "Serbia and Montenegro": "SRB", #"SMR",  # Was a country that split into Serbia and Montenegro
     "Saudi Arabia": "SAU",
     "Dem. Republic of the Congo": "COD",  # Modern name for Zaire
     "United Republic of Tanzania": "TZA",  # Same as 'United Rep. of Tanzania'

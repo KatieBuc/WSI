@@ -11,7 +11,11 @@ def project_root() -> Path:
 
 
 def raw_data_path(*segments) -> Path:
-    return project_root() / "data" / "raw" / Path(*segments)
+    return project_root() / "data" / "raw" / "indicators" / Path(*segments)
+
+
+def processed_data_path(*segments) -> Path:
+    return project_root() / "data" / "processed" / Path(*segments)
 
 
 def ignore_get_iso(name: str):

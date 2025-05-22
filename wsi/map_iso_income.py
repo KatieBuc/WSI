@@ -222,4 +222,5 @@ CODE_INCOME = {
     "ZWE": "Lower middle income",
     "COK": "High income",  # maually added
     "NIU": "High income",  # maually added
+    "VEN": "Upper middle income",  # maually added
 }
