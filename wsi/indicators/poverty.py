@@ -14,7 +14,7 @@ CONFIG = {
 def load_raw(name: str) -> pd.DataFrame:
     """Helper to load the raw Excel by its CONFIG key"""
     file_name = CONFIG[name]["file"]
-    full_path = raw_data_path(file_name)
+    full_path = raw_data_path("indicators", file_name)
     return pd.read_excel(full_path)
 
 

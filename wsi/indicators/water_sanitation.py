@@ -20,7 +20,7 @@ CONFIG = {
 def load_raw(name: str) -> pd.DataFrame:
     """Load the raw CSV by its CONFIG key, trimming trailing NA rows."""
     cfg = CONFIG[name]
-    path = raw_data_path(cfg["file"])
+    path = raw_data_path("indicators", cfg["file"])
     return pd.read_csv(path)
 
 

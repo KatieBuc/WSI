@@ -144,12 +144,15 @@ def main():
             group.loc[after_fill, f"{ind} (source)"] = "TSI"
         return group
 
-    df = df.groupby("ISO_code").apply(fill_missing).reset_index(drop=True)
+    df = df.groupby("ISO_code").apply(fill_missing,include_groups=True).reset_index(drop=True) #TODO: fix DeprecationWarning
     df["Region"] = df["ISO_code"].map(CODE_SUBREGION)
     df["Income"] = df["ISO_code"].map(CODE_INCOME)
 
     region_avgs = df.groupby(["Region", "Year"])[indicator_columns].mean()
     income_avgs = df.groupby(["Income", "Year"])[indicator_columns].mean()
+
+    region_avgs.to_csv(processed_data_path("region_avgs.csv"), index=True)
+    income_avgs.to_csv(processed_data_path("income_avgs.csv"), index=True)
 
     for ind in indicator_columns:
         missing = df.groupby("ISO_code")[ind].apply(lambda x: x.isna().all())
@@ -168,9 +171,18 @@ def main():
                     df.loc[df["ISO_code"] == iso, ind] = fill_vals[ind].values
                     df.loc[df["ISO_code"] == iso, f"{ind} (source)"] = "AVG_REG"
 
+    # data missingness overwrite (Attitudes Towards Violence -> Timor-Leste)
+    regions_to_update = ['Melanesia', 'Micronesia', 'Polynesia']
+    region_rows = df[df['Region'].isin(regions_to_update)]
+    tls_data = df[df['ISO_code'] == 'TLS']
+    for region in region_rows['ISO_code'].values:
+        df.loc[df['ISO_code'] == region, 'Attitudes Towards Violence'] = tls_data['Attitudes Towards Violence'].values[0]
+    df.loc[df['Region'].isin(regions_to_update), 'Attitudes Towards Violence (source)'] = 'AVG_TLS'
+
+    # combine to index
     df_scored = apply_indicator_scoring(df)
     df_scored["Economy"] = df_scored["ISO_code"].map(ALL_ISO_NAME)
-    df_scored.to_csv(processed_data_path("womens_safety_index.csv"), index=False)
+    df_scored.to_csv(processed_data_path("womens_safety_index_baseline.csv"), index=False)
 
 
 if __name__ == "__main__":

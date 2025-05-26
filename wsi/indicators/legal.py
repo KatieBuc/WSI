@@ -14,7 +14,7 @@ CONFIG = {
 def load_raw(name: str) -> pd.DataFrame:
     """Load the specified sheet from the Excel file."""
     cfg = CONFIG[name]
-    path = raw_data_path(cfg["file"])
+    path = raw_data_path("indicators", cfg["file"])
     return pd.read_excel(path, sheet_name=cfg["sheet"])
 
 

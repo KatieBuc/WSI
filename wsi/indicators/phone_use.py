@@ -15,7 +15,7 @@ CONFIG = {
 def load_raw(name: str) -> pd.DataFrame:
     """Load raw CSV by CONFIG key, skipping metadata header rows."""
     cfg = CONFIG[name]
-    path = raw_data_path(cfg["file"])
+    path = raw_data_path("indicators", cfg["file"])
     return pd.read_csv(path, skiprows=4)
 
 

@@ -19,7 +19,7 @@ CONFIG = {
 def load_raw(name: str) -> pd.DataFrame:
     """Helper to load the raw CSV by its CONFIG key ('female' or 'male')."""
     file_name = CONFIG[name]["file"]
-    full_path = raw_data_path(file_name)  # e.g. .../WSI/data/raw/NATMON_....csv
+    full_path = raw_data_path("indicators", file_name)  # e.g. .../WSI/data/raw/NATMON_....csv
     return pd.read_csv(full_path)
 
 

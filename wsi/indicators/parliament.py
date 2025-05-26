@@ -12,7 +12,7 @@ def build_parliamentary_df(iso_codes: list[str] | None = None) -> pd.DataFrame:
     Load, clean, and compute % women in parliament (upper + lower) by ISO and Year.
     """
     # Read all sheets from the raw Excel file
-    file_path = raw_data_path("women_parliments.xlsx")
+    file_path = raw_data_path("indicators", "women_parliments.xlsx")
     all_sheets = pd.read_excel(file_path, sheet_name=None)
 
     # Standard column names for every sheet
