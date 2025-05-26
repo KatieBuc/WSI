@@ -11,7 +11,7 @@ def project_root() -> Path:
 
 
 def raw_data_path(*segments) -> Path:
-    return project_root() / "data" / "raw" /  Path(*segments)
+    return project_root() / "data" / "raw" / Path(*segments)
 
 
 def imgs_path(*segments) -> Path:

@@ -87,7 +87,7 @@ ALL_ISO_NAME = {
     "CHL": "Chile",
     "COL": "Colombia",
     "COM": "Comoros",
-    "COD": "Democratic Republic of Congo", 
+    "COD": "Democratic Republic of Congo",
     "COG": "Republic of Congo",
     "CRI": "Costa Rica",
     "CIV": "Côte d’Ivoire",
