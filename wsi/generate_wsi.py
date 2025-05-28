@@ -16,9 +16,9 @@ from wsi.indicators.financial_inclusion import build_financial_inclusion_df
 from wsi.indicators.phone_use import build_cell_phone_use_df
 
 from wsi.config import INDICATORS, EXCLUDE_ISO
-from wsi.mapping.iso_name import ALL_ISO_NAME
+from wsi.mapping.iso_name import ISO_NAME
 from wsi.mapping.iso_income import CODE_INCOME
-from wsi.mapping.iso_region import CODE_SUBREGION
+from wsi.mapping.iso_region import CODE_SUBREGION, SUBREGION_REGION
 from wsi.utils import processed_data_path
 
 
@@ -92,7 +92,7 @@ def main():
     }
 
     df_raw = pd.DataFrame(
-        [(iso, year) for iso in ALL_ISO_NAME for year in years],
+        [(iso, year) for iso in ISO_NAME for year in years],
         columns=["ISO_code", "Year"],
     )
 
@@ -111,7 +111,7 @@ def main():
             missing_summary.append(
                 {
                     "ISO_code": iso,
-                    "Country": ALL_ISO_NAME.get(iso, "Unknown"),
+                    "Country": ISO_NAME.get(iso, "Unknown"),
                     "Missing_Count": len(missing_indicators),
                     "Indicators": ", ".join(missing_indicators),
                 }
@@ -147,10 +147,11 @@ def main():
     df = df.groupby("ISO_code").apply(fill_missing, include_groups=False)
     df.index = df.index.droplevel(1)
     df = df.reset_index(drop=False)
-    df["Region"] = df["ISO_code"].map(CODE_SUBREGION)
+    df["Subregion"] = df["ISO_code"].map(CODE_SUBREGION)
+    df["Region"] = df["Subregion"].map(SUBREGION_REGION)
     df["Income"] = df["ISO_code"].map(CODE_INCOME)
 
-    region_avgs = df.groupby(["Region", "Year"])[indicator_columns].mean()
+    region_avgs = df.groupby(["Subregion", "Year"])[indicator_columns].mean()
     income_avgs = df.groupby(["Income", "Year"])[indicator_columns].mean()
 
     region_avgs.to_csv(processed_data_path("region_avgs.csv"), index=True)
@@ -174,20 +175,46 @@ def main():
                     df.loc[df["ISO_code"] == iso, f"{ind} (source)"] = "AVG_REG"
 
     # data missingness overwrite (Attitudes Towards Violence -> Timor-Leste)
-    regions_to_update = ["Melanesia", "Micronesia", "Polynesia"]
-    region_rows = df[df["Region"].isin(regions_to_update)]
+    regions_to_fill = ["Melanesia", "Micronesia", "Polynesia"]
+    region_rows = df[df["Subregion"].isin(regions_to_fill)]
     tls_data = df[df["ISO_code"] == "TLS"]
     for region in region_rows["ISO_code"].values:
         df.loc[df["ISO_code"] == region, "Attitudes Towards Violence"] = tls_data[
             "Attitudes Towards Violence"
         ].values[0]
     df.loc[
-        df["Region"].isin(regions_to_update), "Attitudes Towards Violence (source)"
+        df["Subregion"].isin(regions_to_fill), "Attitudes Towards Violence (source)"
     ] = "AVG_TLS"
+
+    # Central/Middle African regions (Attitudes Towards Violence)
+    regions_to_fill = ["Central Africa"]
+    substitute_regions = ["Southern Africa", "Northern Africa", "Western Africa"]
+    avg_by_year = (
+        df[df["Subregion"].isin(substitute_regions)]
+        .groupby("Year")["Attitudes Towards Violence"]
+        .mean()
+    )
+    for year, avg_value in avg_by_year.items():
+        mask = (df["Subregion"].isin(regions_to_fill)) & (df["Year"] == year)
+        df.loc[mask, "Attitudes Towards Violence"] = avg_value
+        df.loc[mask, "Attitudes Towards Violence (source)"] = "AVG_AFR"
+
+    # Aus regions (Child Marriage)
+    regions_to_fill = ["Australia and New Zealand", "North America"]
+    substitute_regions = ["Northern Europe", "Western Europe"]
+    avg_by_year = (
+        df[df["Subregion"].isin(substitute_regions)]
+        .groupby("Year")["Child Marriage"]
+        .mean()
+    )
+    for year, avg_value in avg_by_year.items():
+        mask = (df["Subregion"].isin(regions_to_fill)) & (df["Year"] == year)
+        df.loc[mask, "Child Marriage"] = avg_value
+        df.loc[mask, "Child Marriage (source)"] = "AVG_EUR"
 
     # combine to index
     df_scored = apply_indicator_scoring(df)
-    df_scored["Economy"] = df_scored["ISO_code"].map(ALL_ISO_NAME)
+    df_scored["Economy"] = df_scored["ISO_code"].map(ISO_NAME)
     df_scored.to_csv(
         processed_data_path("womens_safety_index_baseline.csv"), index=False
     )

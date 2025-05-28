@@ -2,7 +2,7 @@
 """standard ISO to CEVAW standard name mapping"""
 
 # establishes which countries are in Asia Pacific and their standardised name
-ALL_ISO_NAME = {
+ISO_NAME = {
     "AFG": "Afghanistan",
     "AUS": "Australia",
     "BGD": "Bangladesh",

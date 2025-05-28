@@ -65,7 +65,7 @@ CODE_SUBREGION = {
     "COM": "Eastern Africa",
     "COD": "Central Africa",
     "COG": "Central Africa",
-    "DJI": "Eastern Africa",
+    "DJI": "Northern Africa",  # changed from 'Eastern Africa' given world bank region classification
     "EGY": "Northern Africa",
     "ERI": "Eastern Africa",
     "ETH": "Eastern Africa",
@@ -86,7 +86,7 @@ CODE_SUBREGION = {
     "NER": "Western Africa",
     "NGA": "Western Africa",
     "RWA": "Eastern Africa",
-    "SDN": "Northern Africa",
+    "SDN": "Eastern Africa",  # changed from 'Northern Africa' given world bank region classification
     "SEN": "Western Africa",
     "SLE": "Western Africa",
     "SOM": "Eastern Africa",
@@ -182,7 +182,6 @@ CODE_SUBREGION = {
     # MENA (more granular)
     "ARE": "Middle East",
     "BHR": "Middle East",
-    "DJI": "Eastern Africa",  # usually East Africa but often grouped in MENA context
     "EGY": "Northern Africa",
     "IRN": "Middle East",
     "IRQ": "Middle East",
@@ -194,7 +193,6 @@ CODE_SUBREGION = {
     "OMN": "Middle East",
     "QAT": "Middle East",
     "SAU": "Middle East",
-    "SDN": "Northern Africa",
     "SYR": "Middle East",
     "TUN": "Northern Africa",
     "YEM": "Middle East",
@@ -210,7 +208,7 @@ CODE_SUBREGION = {
     "COL": "South America",
     "CUW": "Caribbean",
     "GEO": "Western Asia",
-    "GNQ": "Middle Africa",
+    "GNQ": "Central Africa",
     "GUM": "Micronesia",
     "KAZ": "Central Asia",
     "KGZ": "Central Asia",
@@ -222,8 +220,8 @@ CODE_SUBREGION = {
     "MAF": "Caribbean",
     "MAR": "Northern Africa",
     "MUS": "Eastern Africa",  # Often grouped under Africa, island state
-    "PSE": "Western Asia",
-    "STP": "Middle Africa",
+    "PSE": "Middle East",
+    "STP": "Central Africa",
     "SXM": "Caribbean",
     "SYC": "Eastern Africa",
     "TCA": "Caribbean",
@@ -235,4 +233,36 @@ CODE_SUBREGION = {
     "VCT": "Caribbean",
     "VIR": "Caribbean",
     "XKX": "Southern Europe",  # Kosovo, often included here
+}
+
+SUBREGION_REGION = {
+    # South & East Asia & Pacific
+    "Australia and New Zealand": "South & East Asia & Pacific",
+    "East Asia": "South & East Asia & Pacific",
+    "Melanesia": "South & East Asia & Pacific",
+    "Micronesia": "South & East Asia & Pacific",
+    "Polynesia": "South & East Asia & Pacific",
+    "Southeast Asia": "South & East Asia & Pacific",
+    "Southern Asia": "South & East Asia & Pacific",
+    # Europe & Central Asia
+    "Central Asia": "Europe & Central Asia",
+    "Eastern Europe": "Europe & Central Asia",
+    "Northern Europe": "Europe & Central Asia",
+    "Southern Europe": "Europe & Central Asia",
+    "Western Europe": "Europe & Central Asia",
+    "Western Asia": "Europe & Central Asia",
+    # Latin America & Caribbean
+    "Caribbean": "Latin America & Caribbean",
+    "Central America": "Latin America & Caribbean",
+    "South America": "Latin America & Caribbean",
+    # Middle East & North Africa
+    "Middle East": "Middle East & North Africa",
+    "Northern Africa": "Middle East & North Africa",
+    # North America
+    "North America": "North America",
+    # Sub‐Saharan Africa
+    "Central Africa": "Sub-Saharan Africa",
+    "Eastern Africa": "Sub-Saharan Africa",
+    "Southern Africa": "Sub-Saharan Africa",
+    "Western Africa": "Sub-Saharan Africa",
 }
