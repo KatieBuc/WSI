@@ -46,7 +46,7 @@ def apply_indicator_scoring(df: pd.DataFrame) -> pd.DataFrame:
         score_cols = [f"{indicator} (score)" for indicator in indicators]
         df[dimension] = df[score_cols].mean(axis=1)
 
-    score_columns = ["Equity", "Protection", "Resilience"]
+    score_columns = ["Equity", "Protection", "Resources"]
     df["WSI (Baseline)"] = df[score_columns].apply(
         lambda row: gmean(row.dropna()) if not row.isnull().all() else pd.NA, axis=1
     )
@@ -124,9 +124,7 @@ def main():
     summary.to_csv(processed_data_path("missing_indicators_summary.csv"), index=False)
 
     df = df_raw[~df_raw["ISO_code"].isin(EXCLUDE_ISO)].copy()
-
-    # TODO: think about how to handle excluded
-    # df_excluded = df_raw[df_raw["ISO_code"].isin(EXCLUDE_ISO)].copy()
+    df_excluded = df_raw[df_raw["ISO_code"].isin(EXCLUDE_ISO)].copy()
 
     for ind in indicator_columns:
         df[f"{ind} (source)"] = ""
@@ -212,8 +210,15 @@ def main():
         df.loc[mask, "Child Marriage"] = avg_value
         df.loc[mask, "Child Marriage (source)"] = "AVG_EUR"
 
-    # combine to index
+    # combine to index (get scores and compute baseline index value)
     df_scored = apply_indicator_scoring(df)
+
+    # add back the excluded, and mark which is indluded
+    df_scored["included_index"] = True
+    df_excluded["included_index"] = False
+    df_scored = pd.concat([df_scored, df_excluded], ignore_index=True)
+
+    # store processed result
     df_scored["Economy"] = df_scored["ISO_code"].map(ISO_NAME)
     df_scored.to_csv(
         processed_data_path("womens_safety_index_baseline.csv"), index=False

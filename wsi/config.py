@@ -27,22 +27,22 @@ INDICATORS = {
     },
     "Child Marriage": {"dimension": "Protection", "invert": True, "fill": "region_avg"},
     "Access Water Sanitation": {
-        "dimension": "Resilience",
+        "dimension": "Resources",
         "invert": False,
         "fill": "region_avg",
     },
     "Access Electricity": {
-        "dimension": "Resilience",
+        "dimension": "Resources",
         "invert": False,
         "fill": "region_avg",
     },
     "Cell Phone Use": {
-        "dimension": "Resilience",
+        "dimension": "Resources",
         "invert": False,
         "fill": "region_avg",
     },
     "Financial Inclusion": {
-        "dimension": "Resilience",
+        "dimension": "Resources",
         "invert": False,
         "fill": "income_avg",
     },
