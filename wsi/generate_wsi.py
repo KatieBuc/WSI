@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from scipy.stats import gmean
 
 from wsi.indicators.education import build_education_df
@@ -130,6 +131,22 @@ def main():
         df[f"{ind} (source)"] = ""
         df.loc[df[ind].notna(), f"{ind} (source)"] = "ORI"
 
+    # For poverty, when we don't have intl poverty line estimates at all, first check the national poverty data
+    # (which has been transformed accordingly)
+    poverty_estimates = pd.read_csv(processed_data_path("intl_poverty_predictions.csv"), index_col=0)
+    poverty_estimates['Poverty (source)'] = 'MDL_POV'
+    df = df.merge(
+        poverty_estimates,
+        on=['ISO_code', 'Year'],
+        how='left',
+        suffixes=('', '_predicted')
+    )
+
+    # Fill missing 'Poverty' values in df with predicted ones
+    df['Poverty'] = df['Poverty'].fillna(df['Poverty_predicted'])
+    df['Poverty (source)'] = df['Poverty (source)'].replace('', np.nan).fillna(df['Poverty (source)_predicted']).astype(str)
+    df = df.drop(columns=['Poverty_predicted','Poverty (source)_predicted'])
+
     def fill_missing(group):
         for ind in indicator_columns:
             group[ind] = pd.to_numeric(group[ind], errors="coerce")
@@ -223,6 +240,8 @@ def main():
     df_scored.to_csv(
         processed_data_path("womens_safety_index_baseline.csv"), index=False
     )
+
+    # for download - rename variables and get index on scale [0,100]
 
 
 if __name__ == "__main__":

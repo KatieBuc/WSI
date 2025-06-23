@@ -1,167 +1,167 @@
 ISO_code,Country,Missing_Count,Indicators
 CHI,Channel Islands,12,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Son Bias, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Water Sanitation, Cell Phone Use, Financial Inclusion"
-TKL,Tokelau,12,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Water Sanitation, Access Electricity, Cell Phone Use, Financial Inclusion"
 WLF,Wallis and Futuna Islands,12,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Water Sanitation, Access Electricity, Cell Phone Use, Financial Inclusion"
+TKL,Tokelau,12,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Water Sanitation, Access Electricity, Cell Phone Use, Financial Inclusion"
 NIU,Niue,12,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Water Sanitation, Access Electricity, Cell Phone Use, Financial Inclusion"
 COK,Cook Islands,11,"Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Water Sanitation, Access Electricity, Cell Phone Use, Financial Inclusion"
 ASM,American Samoa,10,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Electricity, Financial Inclusion"
 MAF,St. Martin (French part),10,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Cell Phone Use, Financial Inclusion"
-MNP,Northern Mariana Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+FRO,Faroe Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 GIB,Gibraltar,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-VGB,British Virgin Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+GRL,Greenland,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+GUM,Guam,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 IMN,Isle of Man,9,"Education, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Cell Phone Use, Financial Inclusion"
-TWN,Taiwan,9,"Education, Employment, Parliamentary Representation, Poverty, Maternal Mortality, Child Marriage, Access Water Sanitation, Access Electricity, Cell Phone Use"
-VIR,Virgin Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 XKX,Kosovo,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Access Water Sanitation"
 SXM,Sint Maarten (Dutch part),9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-GRL,Greenland,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-FRO,Faroe Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-GUM,Guam,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+TWN,Taiwan,9,"Education, Employment, Parliamentary Representation, Poverty, Maternal Mortality, Child Marriage, Access Water Sanitation, Access Electricity, Cell Phone Use"
+VGB,British Virgin Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+VIR,Virgin Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+MNP,Northern Mariana Islands,9,"Education, Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 BMU,Bermuda,8,"Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-CYM,Cayman Islands,7,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-KNA,St. Kitts and Nevis,7,"Education, Employment, Poverty, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-MCO,Monaco,7,"Education, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-TCA,Turks and Caicos Islands,7,"Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Financial Inclusion"
 NCL,New Caledonia,7,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-ABW,Aruba,7,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+MCO,Monaco,7,"Education, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 PYF,French Polynesia,7,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+KNA,St. Kitts and Nevis,7,"Education, Employment, Poverty, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+TCA,Turks and Caicos Islands,7,"Employment, Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Financial Inclusion"
+CYM,Cayman Islands,7,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 CUW,Curaçao,7,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+ABW,Aruba,7,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 AND,Andorra,6,"Employment, Poverty, Legal Protection Index, Maternal Mortality, Child Marriage, Financial Inclusion"
-PRK,Democratic People's Republic of Korea (North Korea),6,"Education, Employment, Poverty, Legal Protection Index, Attitudes Towards Violence, Financial Inclusion"
 LIE,Liechtenstein,6,"Poverty, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 MAC,"Macao SAR, China",6,"Parliamentary Representation, Poverty, Legal Protection Index, Maternal Mortality, Child Marriage, Financial Inclusion"
+PRK,Democratic People's Republic of Korea (North Korea),6,"Education, Employment, Poverty, Legal Protection Index, Attitudes Towards Violence, Financial Inclusion"
 DMA,Dominica,6,"Employment, Poverty, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-ERI,Eritrea,5,"Education, Employment, Poverty, Attitudes Towards Violence, Financial Inclusion"
-GNQ,Equatorial Guinea,5,"Education, Employment, Poverty, Attitudes Towards Violence, Financial Inclusion"
 PLW,Palau,5,"Poverty, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-SMR,San Marino,5,"Poverty, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-NRU,Nauru,5,"Education, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Financial Inclusion"
+GNQ,Equatorial Guinea,5,"Education, Employment, Poverty, Attitudes Towards Violence, Financial Inclusion"
 VCT,St. Vincent and the Grenadines,5,"Employment, Poverty, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-HKG,Hong Kong,4,"Parliamentary Representation, Poverty, Maternal Mortality, Child Marriage"
-GRD,Grenada,4,"Education, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-TKM,Turkmenistan,4,"Employment, Poverty, Legal Protection Index, Attitudes Towards Violence"
-TUV,Tuvalu,4,"Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Financial Inclusion"
-SAU,Saudi Arabia,4,"Employment, Poverty, Attitudes Towards Violence, Child Marriage"
-BHS,The Bahamas,4,"Poverty, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+SMR,San Marino,5,"Poverty, Maternal Mortality, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+ERI,Eritrea,5,"Education, Employment, Poverty, Attitudes Towards Violence, Financial Inclusion"
+NRU,Nauru,5,"Education, Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Financial Inclusion"
 BRN,Brunei,4,"Poverty, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
 FSM,Micronesia,4,"Education, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-ATG,Antigua and Barbuda,4,"Poverty, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+HKG,Hong Kong,4,"Parliamentary Representation, Poverty, Maternal Mortality, Child Marriage"
+BHS,The Bahamas,4,"Poverty, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+GRD,Grenada,4,"Education, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+SAU,Saudi Arabia,4,"Employment, Poverty, Attitudes Towards Violence, Child Marriage"
 CUB,Cuba,4,"Poverty, Legal Protection Index, Attitudes Towards Violence, Financial Inclusion"
+ATG,Antigua and Barbuda,4,"Poverty, Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+TKM,Turkmenistan,4,"Employment, Poverty, Legal Protection Index, Attitudes Towards Violence"
+TUV,Tuvalu,4,"Legal Protection Index, Maternal Mortality, Attitudes Towards Violence, Financial Inclusion"
 PRI,Puerto Rico,3,"Parliamentary Representation, Poverty, Child Marriage"
-SYC,Seychelles,3,"Attitudes Towards Violence, Child Marriage, Financial Inclusion"
-SLB,Solomon Islands,3,"Education, Attitudes Towards Violence, Financial Inclusion"
-GNB,Guinea-Bissau,3,"Education, Attitudes Towards Violence, Financial Inclusion"
-LBY,Libya,3,"Education, Poverty, Child Marriage"
-KWT,Kuwait,3,"Employment, Poverty, Child Marriage"
-BWA,Botswana,3,"Education, Attitudes Towards Violence, Child Marriage"
-BRB,Barbados,3,"Poverty, Attitudes Towards Violence, Financial Inclusion"
 BHR,Bahrain,3,"Poverty, Attitudes Towards Violence, Child Marriage"
+SLB,Solomon Islands,3,"Education, Attitudes Towards Violence, Financial Inclusion"
+SYC,Seychelles,3,"Attitudes Towards Violence, Child Marriage, Financial Inclusion"
+KWT,Kuwait,3,"Employment, Poverty, Child Marriage"
+GUY,Guyana,3,"Poverty, Attitudes Towards Violence, Financial Inclusion"
+BRB,Barbados,3,"Poverty, Attitudes Towards Violence, Financial Inclusion"
 VUT,Vanuatu,3,"Education, Attitudes Towards Violence, Financial Inclusion"
 MHL,Marshall Islands,3,"Maternal Mortality, Attitudes Towards Violence, Financial Inclusion"
-GUY,Guyana,3,"Poverty, Attitudes Towards Violence, Financial Inclusion"
-CAF,Central African Republic,2,"Employment, Attitudes Towards Violence"
-BLZ,Belize,2,"Poverty, Attitudes Towards Violence"
-LVA,Latvia,2,"Attitudes Towards Violence, Child Marriage"
-KIR,Kiribati,2,"Attitudes Towards Violence, Financial Inclusion"
-AUT,Austria,2,"Attitudes Towards Violence, Child Marriage"
-CPV,Cabo Verde,2,"Attitudes Towards Violence, Financial Inclusion"
-AFG,Afghanistan,2,"Poverty, Attitudes Towards Violence"
-ARE,United Arab Emirates,2,"Attitudes Towards Violence, Child Marriage"
-SOM,Somalia,2,"Poverty, Attitudes Towards Violence"
-STP,São Tomé and Príncipe,2,"Attitudes Towards Violence, Financial Inclusion"
-TLS,Timor-Leste,2,"Attitudes Towards Violence, Financial Inclusion"
-TON,Tonga,2,"Attitudes Towards Violence, Financial Inclusion"
-WSM,Samoa,2,"Attitudes Towards Violence, Financial Inclusion"
-PNG,Papua New Guinea,2,"Attitudes Towards Violence, Financial Inclusion"
-MUS,Mauritius,2,"Attitudes Towards Violence, Child Marriage"
-OMN,Oman,2,"Poverty, Attitudes Towards Violence"
+LBY,Libya,3,"Education, Poverty, Child Marriage"
+GNB,Guinea-Bissau,3,"Education, Attitudes Towards Violence, Financial Inclusion"
+BWA,Botswana,3,"Education, Attitudes Towards Violence, Child Marriage"
 SUR,Suriname,2,"Attitudes Towards Violence, Financial Inclusion"
+AFG,Afghanistan,2,"Poverty, Attitudes Towards Violence"
 LCA,St. Lucia,2,"Attitudes Towards Violence, Financial Inclusion"
-HRV,Croatia,2,"Attitudes Towards Violence, Child Marriage"
-IRL,Ireland,2,"Attitudes Towards Violence, Child Marriage"
-ISR,Israel,2,"Attitudes Towards Violence, Child Marriage"
-ISL,Iceland,2,"Attitudes Towards Violence, Child Marriage"
-LUX,Luxembourg,2,"Attitudes Towards Violence, Child Marriage"
-MLT,Malta,2,"Attitudes Towards Violence, Child Marriage"
-GAB,Gabon,2,"Education, Attitudes Towards Violence"
 FJI,Fiji,2,"Attitudes Towards Violence, Financial Inclusion"
-SDN,Sudan,2,"Education, Attitudes Towards Violence"
-PRT,Portugal,2,"Attitudes Towards Violence, Child Marriage"
-KHM,Cambodia,2,"Poverty, Attitudes Towards Violence"
+TLS,Timor-Leste,2,"Attitudes Towards Violence, Financial Inclusion"
+CPV,Cabo Verde,2,"Attitudes Towards Violence, Financial Inclusion"
+LUX,Luxembourg,2,"Attitudes Towards Violence, Child Marriage"
+AUT,Austria,2,"Attitudes Towards Violence, Child Marriage"
+MLT,Malta,2,"Attitudes Towards Violence, Child Marriage"
+MUS,Mauritius,2,"Attitudes Towards Violence, Child Marriage"
+ARE,United Arab Emirates,2,"Attitudes Towards Violence, Child Marriage"
+STP,São Tomé and Príncipe,2,"Attitudes Towards Violence, Financial Inclusion"
+SOM,Somalia,2,"Poverty, Attitudes Towards Violence"
+CAF,Central African Republic,2,"Employment, Attitudes Towards Violence"
 NZL,New Zealand,2,"Poverty, Child Marriage"
-ALB,Albania,1,Attitudes Towards Violence
+OMN,Oman,2,"Poverty, Attitudes Towards Violence"
+SDN,Sudan,2,"Education, Attitudes Towards Violence"
+PNG,Papua New Guinea,2,"Attitudes Towards Violence, Financial Inclusion"
+TON,Tonga,2,"Attitudes Towards Violence, Financial Inclusion"
+LVA,Latvia,2,"Attitudes Towards Violence, Child Marriage"
+PRT,Portugal,2,"Attitudes Towards Violence, Child Marriage"
+WSM,Samoa,2,"Attitudes Towards Violence, Financial Inclusion"
+IRL,Ireland,2,"Attitudes Towards Violence, Child Marriage"
+HRV,Croatia,2,"Attitudes Towards Violence, Child Marriage"
+ISL,Iceland,2,"Attitudes Towards Violence, Child Marriage"
+ISR,Israel,2,"Attitudes Towards Violence, Child Marriage"
+GAB,Gabon,2,"Education, Attitudes Towards Violence"
+BLZ,Belize,2,"Poverty, Attitudes Towards Violence"
+KHM,Cambodia,2,"Poverty, Attitudes Towards Violence"
+KIR,Kiribati,2,"Attitudes Towards Violence, Financial Inclusion"
+CYP,Cyprus,1,Child Marriage
 AGO,Angola,1,Attitudes Towards Violence
-CIV,Côte d’Ivoire,1,Attitudes Towards Violence
 CMR,Cameroon,1,Attitudes Towards Violence
-CAN,Canada,1,Child Marriage
-BGR,Bulgaria,1,Child Marriage
-BEL,Belgium,1,Attitudes Towards Violence
-BDI,Burundi,1,Attitudes Towards Violence
-AUS,Australia,1,Child Marriage
-BEN,Benin,1,Attitudes Towards Violence
-BIH,Bosnia and Herzegovina,1,Attitudes Towards Violence
-BTN,Bhutan,1,Attitudes Towards Violence
-CRI,Costa Rica,1,Attitudes Towards Violence
+QAT,Qatar,1,Poverty
 COD,Democratic Republic of Congo,1,Attitudes Towards Violence
-COG,Republic of Congo,1,Attitudes Towards Violence
-COM,Comoros,1,Attitudes Towards Violence
+SGP,Singapore,1,Poverty
+ALB,Albania,1,Attitudes Towards Violence
+SLE,Sierra Leone,1,Attitudes Towards Violence
+BDI,Burundi,1,Attitudes Towards Violence
+SLV,El Salvador,1,Attitudes Towards Violence
+CAN,Canada,1,Child Marriage
+SSD,South Sudan,1,Attitudes Towards Violence
+PSE,West Bank and Gaza,1,Parliamentary Representation
+SEN,Senegal,1,Attitudes Towards Violence
 CHE,Switzerland,1,Child Marriage
-CHL,Chile,1,Child Marriage
+TTO,Trinidad and Tobago,1,Poverty
+PRY,Paraguay,1,Attitudes Towards Violence
+TZA,Tanzania,1,Attitudes Towards Violence
+UGA,Uganda,1,Attitudes Towards Violence
+USA,United States,1,Child Marriage
+COM,Comoros,1,Attitudes Towards Violence
+COG,Republic of Congo,1,Attitudes Towards Violence
+VEN,"Venezuela, Bolivarian Republic",1,Child Marriage
+TGO,Togo,1,Attitudes Towards Violence
+SVN,Slovenia,1,Child Marriage
+TCD,Chad,1,Attitudes Towards Violence
+AUS,Australia,1,Child Marriage
+SYR,Syrian Arab Republic,1,Attitudes Towards Violence
+CRI,Costa Rica,1,Attitudes Towards Violence
+SWZ,Eswatini,1,Attitudes Towards Violence
+SWE,Sweden,1,Child Marriage
+SVK,Slovak Republic,1,Child Marriage
+DNK,Denmark,1,Attitudes Towards Violence
+CZE,Czechia,1,Child Marriage
+BIH,Bosnia and Herzegovina,1,Attitudes Towards Violence
+EST,Estonia,1,Child Marriage
 LTU,Lithuania,1,Attitudes Towards Violence
-MKD,North Macedonia,1,Attitudes Towards Violence
-JPN,Japan,1,Child Marriage
-KAZ,Kazakhstan,1,Employment
-ITA,Italy,1,Child Marriage
-JAM,Jamaica,1,Attitudes Towards Violence
-LAO,Laos,1,Attitudes Towards Violence
 LSO,Lesotho,1,Attitudes Towards Violence
 LKA,Sri Lanka,1,Attitudes Towards Violence
-MAR,Morocco,1,Education
-CZE,Czechia,1,Child Marriage
-EST,Estonia,1,Child Marriage
+LBR,Liberia,1,Attitudes Towards Violence
+LAO,Laos,1,Attitudes Towards Violence
 FRA,France,1,Child Marriage
-CYP,Cyprus,1,Child Marriage
-DEU,Germany,1,Child Marriage
-DJI,Djibouti,1,Attitudes Towards Violence
-DNK,Denmark,1,Attitudes Towards Violence
-DOM,Dominican Republic,1,Attitudes Towards Violence
-GRC,Greece,1,Child Marriage
+KOR,Republic of Korea (South Korea),1,Child Marriage
+KAZ,Kazakhstan,1,Employment
+MAR,Morocco,1,Education
+JPN,Japan,1,Child Marriage
+JAM,Jamaica,1,Attitudes Towards Violence
+ITA,Italy,1,Child Marriage
+HUN,Hungary,1,Child Marriage
+HND,Honduras,1,Attitudes Towards Violence
+BTN,Bhutan,1,Attitudes Towards Violence
+GIN,Guinea,1,Attitudes Towards Violence
 GMB,The Gambia,1,Attitudes Towards Violence
 ESP,Spain,1,Child Marriage
-GIN,Guinea,1,Attitudes Towards Violence
-HND,Honduras,1,Attitudes Towards Violence
-KOR,Republic of Korea (South Korea),1,Child Marriage
-LBR,Liberia,1,Attitudes Towards Violence
-HUN,Hungary,1,Child Marriage
-MOZ,Mozambique,1,Attitudes Towards Violence
-MNE,Montenegro,1,Attitudes Towards Violence
-MDG,Madagascar,1,Attitudes Towards Violence
-SGP,Singapore,1,Poverty
+DOM,Dominican Republic,1,Attitudes Towards Violence
+DEU,Germany,1,Child Marriage
+BEN,Benin,1,Attitudes Towards Violence
 POL,Poland,1,Child Marriage
-PRY,Paraguay,1,Attitudes Towards Violence
-PSE,West Bank and Gaza,1,Parliamentary Representation
-QAT,Qatar,1,Poverty
-NER,Niger,1,Attitudes Towards Violence
-NAM,Namibia,1,Attitudes Towards Violence
-MWI,Malawi,1,Attitudes Towards Violence
-MYS,Malaysia,1,Child Marriage
-MRT,Mauritania,1,Attitudes Towards Violence
+DJI,Djibouti,1,Attitudes Towards Violence
+PAN,Panama,1,Attitudes Towards Violence
+GRC,Greece,1,Child Marriage
 NPL,Nepal,1,Attitudes Towards Violence
 NLD,Netherlands,1,Child Marriage
-PAN,Panama,1,Attitudes Towards Violence
-SLV,El Salvador,1,Attitudes Towards Violence
-SLE,Sierra Leone,1,Attitudes Towards Violence
-SEN,Senegal,1,Attitudes Towards Violence
-SSD,South Sudan,1,Attitudes Towards Violence
-SVK,Slovak Republic,1,Child Marriage
-SVN,Slovenia,1,Child Marriage
-SWE,Sweden,1,Child Marriage
-SWZ,Eswatini,1,Attitudes Towards Violence
-TCD,Chad,1,Attitudes Towards Violence
-TGO,Togo,1,Attitudes Towards Violence
-SYR,Syrian Arab Republic,1,Attitudes Towards Violence
-TTO,Trinidad and Tobago,1,Poverty
-USA,United States,1,Child Marriage
-UGA,Uganda,1,Attitudes Towards Violence
-TZA,Tanzania,1,Attitudes Towards Violence
-VEN,"Venezuela, Bolivarian Republic",1,Child Marriage
+BEL,Belgium,1,Attitudes Towards Violence
+NER,Niger,1,Attitudes Towards Violence
+NAM,Namibia,1,Attitudes Towards Violence
+MDG,Madagascar,1,Attitudes Towards Violence
+MYS,Malaysia,1,Child Marriage
+MWI,Malawi,1,Attitudes Towards Violence
+MRT,Mauritania,1,Attitudes Towards Violence
+MOZ,Mozambique,1,Attitudes Towards Violence
+BGR,Bulgaria,1,Child Marriage
+MNE,Montenegro,1,Attitudes Towards Violence
+MKD,North Macedonia,1,Attitudes Towards Violence
+CIV,Côte d’Ivoire,1,Attitudes Towards Violence
+CHL,Chile,1,Child Marriage
