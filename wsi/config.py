@@ -82,3 +82,19 @@ EXCLUDE_ISO = {
     "WLF",
     "XKX",
 }
+
+RENAME_INDICATOR_SCORE = {
+    "Education": "Education",
+    "Employment": "Employment",
+    "Parliamentary Representation": "Parliamentary Representation",
+    "Poverty": "Poverty Alleviation",
+    "Legal Protection Index": "Legal Protection",
+    "Son Bias": "Gender-Equitable Births",
+    "Maternal Mortality": "Maternal Survival",
+    "Attitudes Towards Violence": "Attitudes Against Violence",
+    "Child Marriage": "Absence of Child Marriage",
+    "Access Water Sanitation": "Water Sanitation Access",
+    "Access Electricity": "Electricity Access",
+    "Cell Phone Use": "Cell Phone Use",
+    "Financial Inclusion": "Financial Inclusion",
+}

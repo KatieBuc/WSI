@@ -237,16 +237,16 @@ CODE_SUBREGION = {
 
 SUBREGION_REGION = {
     # South & East Asia & Pacific
-    "Australia and New Zealand": "South & East Asia & Pacific",
-    "East Asia": "South & East Asia & Pacific",
-    "Melanesia": "South & East Asia & Pacific",
-    "Micronesia": "South & East Asia & Pacific",
-    "Polynesia": "South & East Asia & Pacific",
-    "Southeast Asia": "South & East Asia & Pacific",
-    "Southern Asia": "South & East Asia & Pacific",
+    "Australia and New Zealand": "East Asia & Pacific",
+    "East Asia": "East Asia & Pacific",
+    "Melanesia": "East Asia & Pacific",
+    "Micronesia": "East Asia & Pacific",
+    "Polynesia": "East Asia & Pacific",
+    "Southeast Asia": "East Asia & Pacific",
+    "Southern Asia": "South Asia",
     # Europe & Central Asia
     "Central Asia": "Europe & Central Asia",
-    "Eastern Europe": "Europe & Central Asia",
+    "Eastern Europe": "Europe & Central Asia", # Russia & Eurasia?
     "Northern Europe": "Europe & Central Asia",
     "Southern Europe": "Europe & Central Asia",
     "Western Europe": "Europe & Central Asia",

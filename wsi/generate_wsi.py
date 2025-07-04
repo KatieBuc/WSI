@@ -16,7 +16,7 @@ from wsi.indicators.electricity import build_access_electricity_df
 from wsi.indicators.financial_inclusion import build_financial_inclusion_df
 from wsi.indicators.phone_use import build_cell_phone_use_df
 
-from wsi.config import INDICATORS, EXCLUDE_ISO
+from wsi.config import INDICATORS, EXCLUDE_ISO, RENAME_INDICATOR_SCORE
 from wsi.mapping.iso_name import ISO_NAME
 from wsi.mapping.iso_income import CODE_INCOME
 from wsi.mapping.iso_region import CODE_SUBREGION, SUBREGION_REGION
@@ -45,7 +45,7 @@ def apply_indicator_scoring(df: pd.DataFrame) -> pd.DataFrame:
 
     for dimension, indicators in dimension_groups.items():
         score_cols = [f"{indicator} (score)" for indicator in indicators]
-        df[dimension] = df[score_cols].mean(axis=1)
+        df[dimension] = df[score_cols].mean(axis=1) * 100.0
 
     score_columns = ["Equity", "Protection", "Resources"]
     df["WSI (Baseline)"] = df[score_columns].apply(
@@ -133,19 +133,26 @@ def main():
 
     # For poverty, when we don't have intl poverty line estimates at all, first check the national poverty data
     # (which has been transformed accordingly)
-    poverty_estimates = pd.read_csv(processed_data_path("intl_poverty_predictions.csv"), index_col=0)
-    poverty_estimates['Poverty (source)'] = 'MDL_POV'
+    poverty_estimates = pd.read_csv(
+        processed_data_path("intl_poverty_predictions.csv"), index_col=0
+    )
+    poverty_estimates["Poverty (source)"] = "MDL_POV"
     df = df.merge(
         poverty_estimates,
-        on=['ISO_code', 'Year'],
-        how='left',
-        suffixes=('', '_predicted')
+        on=["ISO_code", "Year"],
+        how="left",
+        suffixes=("", "_predicted"),
     )
 
     # Fill missing 'Poverty' values in df with predicted ones
-    df['Poverty'] = df['Poverty'].fillna(df['Poverty_predicted'])
-    df['Poverty (source)'] = df['Poverty (source)'].replace('', np.nan).fillna(df['Poverty (source)_predicted']).astype(str)
-    df = df.drop(columns=['Poverty_predicted','Poverty (source)_predicted'])
+    df["Poverty"] = df["Poverty"].fillna(df["Poverty_predicted"])
+    df["Poverty (source)"] = (
+        df["Poverty (source)"]
+        .replace("", np.nan)
+        .fillna(df["Poverty (source)_predicted"])
+        .astype(str)
+    )
+    df = df.drop(columns=["Poverty_predicted", "Poverty (source)_predicted"])
 
     def fill_missing(group):
         for ind in indicator_columns:
@@ -237,11 +244,18 @@ def main():
 
     # store processed result
     df_scored["Economy"] = df_scored["ISO_code"].map(ISO_NAME)
+    
+    # for download - rename variables and get index on scale [0,100]
+    rename_map = {}
+    for ind in indicator_columns:
+        score_name = RENAME_INDICATOR_SCORE[ind]
+        rename_map[f"{ind} (score)"] = f"{score_name} (score)"
+        rename_map[f"{ind} (source)"] = f"{score_name} (source)"
+    df_scored = df_scored.rename(columns=rename_map)
+    
     df_scored.to_csv(
         processed_data_path("womens_safety_index_baseline.csv"), index=False
     )
-
-    # for download - rename variables and get index on scale [0,100]
 
 
 if __name__ == "__main__":
