@@ -176,3 +176,4 @@ cython_debug/
 data/raw/
 imgs/
 gleditsch.ipynb
+data/processed/shocks/proximity_conflict/heatmap_grid/*
